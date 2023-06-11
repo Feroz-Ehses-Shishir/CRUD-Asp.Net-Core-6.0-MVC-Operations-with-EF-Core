@@ -1,0 +1,31 @@
+﻿@model List<studentCrud.Models.DomainModel.student>
+
+<h1>Students</h1>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Student Id</th>
+            <th>Department</th>
+            <th> </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Name</td>
+                <td>@x.StudentId</td>
+                <td>@x.Department</td>
+                <td><a href="Update/@x.Id">Update</a></td>
+                <td><a href="Delete/@x.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
